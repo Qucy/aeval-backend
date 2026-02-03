@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ag-001",
+    "name": "Customer Support Bot",
+    "type": "RAG",
+    "description": "A RAG-based agent trained on company help center articles.",
+    "capabilities": ["retrieval", "qa", "summarization"]
+  },
+  {
+    "id": "ag-002",
+    "name": "Code Assistant Pro",
+    "type": "Coding",
+    "description": "Specialized in Python and JavaScript development and debugging.",
+    "capabilities": ["code-gen", "debugging", "refactoring"]
+  },
+  {
+    "id": "ag-003",
+    "name": "General Chatbot (GPT-4o)",
+    "type": "Chatbot",
+    "description": "General purpose conversational agent using GPT-4o.",
+    "capabilities": ["chat", "creative-writing", "reasoning"]
+  }
+]

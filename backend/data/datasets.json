@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ds-001",
+    "name": "Customer Support QA",
+    "description": "Real-world customer support tickets and responses for evaluating empathy and accuracy.",
+    "tags": ["support", "qa", "empathy"],
+    "size": "10k samples",
+    "total_records": 10000,
+    "file_format": "csv",
+    "metadata_quality_score": 0.95,
+    "application_context": "Customer Service Chatbot Evaluation",
+    "created_at": "2023-10-15T10:30:00Z"
+  },
+  {
+    "id": "ds-002",
+    "name": "HumanEval Python",
+    "description": "Standard benchmark for evaluating Python coding capabilities.",
+    "tags": ["code", "python", "benchmark"],
+    "size": "164 samples",
+    "total_records": 164,
+    "file_format": "jsonl",
+    "metadata_quality_score": 0.98,
+    "application_context": "Code Generation Model Benchmark",
+    "created_at": "2023-09-20T14:15:00Z"
+  },
+  {
+    "id": "ds-003",
+    "name": "Safety Bench v2",
+    "description": "Adversarial prompts designed to test safety guardrails and refusal behavior.",
+    "tags": ["safety", "adversarial", "red-teaming"],
+    "size": "500 samples",
+    "total_records": 500,
+    "file_format": "json",
+    "metadata_quality_score": 0.92,
+    "application_context": "Safety Compliance Testing",
+    "created_at": "2023-11-05T09:45:00Z"
+  },
+  {
+    "id": "ds-004",
+    "name": "Medical Diagnosis Q&A",
+    "description": "Complex medical case studies with expert-verified diagnoses.",
+    "tags": ["medical", "expert", "qa"],
+    "size": "1.2k samples",
+    "total_records": 1200,
+    "file_format": "csv",
+    "metadata_quality_score": 0.88,
+    "application_context": "Medical Assistant Evaluation",
+    "created_at": "2023-10-28T16:20:00Z"
+  },
+  {
+    "id": "ds-005",
+    "name": "Legal Contract Review",
+    "description": "NDA and service agreements with annotated risk clauses.",
+    "tags": ["legal", "analysis", "contracts"],
+    "size": "300 samples",
+    "total_records": 300,
+    "file_format": "txt",
+    "metadata_quality_score": 0.85,
+    "application_context": "Legal Document Analysis",
+    "created_at": "2023-11-10T11:10:00Z"
+  },
+  {
+    "id": "ds-006",
+    "name": "GSM8K Math Problems",
+    "description": "Grade school math word problems requiring multi-step reasoning.",
+    "tags": ["math", "reasoning", "logic"],
+    "size": "8.5k samples",
+    "total_records": 8500,
+    "file_format": "jsonl",
+    "metadata_quality_score": 0.99,
+    "application_context": "Reasoning Logic Test",
+    "created_at": "2023-08-15T08:00:00Z"
+  },
+  {
+    "id": "ds-007",
+    "name": "Creative Writing Prompts",
+    "description": "Open-ended prompts for storytelling and creative content generation.",
+    "tags": ["creative", "writing", "storytelling"],
+    "size": "2k samples",
+    "total_records": 2000,
+    "file_format": "csv",
+    "metadata_quality_score": 0.75,
+    "application_context": "Creative Writing Assistant",
+    "created_at": "2023-11-25T13:30:00Z"
+  },
+  {
+    "id": "ds-008",
+    "name": "Financial Sentiment Analysis",
+    "description": "News headlines and tweets labeled with market sentiment.",
+    "tags": ["finance", "sentiment", "classification"],
+    "size": "50k samples",
+    "total_records": 50000,
+    "file_format": "csv",
+    "metadata_quality_score": 0.94,
+    "application_context": "Financial Market Analysis",
+    "created_at": "2023-10-05T15:45:00Z"
+  },
+  {
+    "id": "ds-009",
+    "name": "Translation Corpus (En-Es)",
+    "description": "High-quality parallel text for English-Spanish translation evaluation.",
+    "tags": ["translation", "multilingual", "spanish"],
+    "size": "100k samples",
+    "total_records": 100000,
+    "file_format": "tmx",
+    "metadata_quality_score": 0.96,
+    "application_context": "Machine Translation Evaluation",
+    "created_at": "2023-09-10T10:00:00Z"
+  },
+  {
+    "id": "ds-010",
+    "name": "SQL Generation Spider",
+    "description": "Natural language questions and corresponding SQL queries across multiple domains.",
+    "tags": ["code", "sql", "database"],
+    "size": "7k samples",
+    "total_records": 7000,
+    "file_format": "json",
+    "metadata_quality_score": 0.97,
+    "application_context": "Text-to-SQL Agent Evaluation",
+    "created_at": "2023-10-20T12:00:00Z"
+  }
+]

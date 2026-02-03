@@ -1,0 +1,142 @@
+[
+  {
+    "id": "met-001",
+    "name": "Exact Match",
+    "category": "Accuracy",
+    "description": "Checks if the generated output exactly matches the reference.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-002",
+    "name": "BLEU Score",
+    "category": "Similarity",
+    "description": "Measures n-gram overlap between candidate and reference translations.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-003",
+    "name": "ROUGE-L",
+    "category": "Similarity",
+    "description": "Measures longest common subsequence for summarization tasks.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-004",
+    "name": "Hallucination Rate",
+    "category": "Safety",
+    "description": "Percentage of responses containing factually incorrect information.",
+    "cost": "High"
+  },
+  {
+    "id": "met-005",
+    "name": "Toxicity Score",
+    "category": "Safety",
+    "description": "Detects toxic, offensive, or harmful language.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-006",
+    "name": "Bias Detector",
+    "category": "Safety",
+    "description": "Identifies gender, racial, or political bias in responses.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-007",
+    "name": "Code Execution Pass Rate",
+    "category": "Code",
+    "description": "Percentage of generated code snippets that pass unit tests.",
+    "cost": "High"
+  },
+  {
+    "id": "met-008",
+    "name": "Response Latency",
+    "category": "Performance",
+    "description": "Time taken to generate the first token and full response.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-009",
+    "name": "Token Usage",
+    "category": "Performance",
+    "description": "Number of tokens consumed per request.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-010",
+    "name": "Context Adherence",
+    "category": "RAG",
+    "description": "Measures how well the answer is supported by the retrieved context.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-011",
+    "name": "Relevance",
+    "category": "Quality",
+    "description": "How relevant the answer is to the user's question.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-012",
+    "name": "Coherence",
+    "category": "Quality",
+    "description": "Logical flow and clarity of the response.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-013",
+    "name": "Conciseness",
+    "category": "Style",
+    "description": "Avoidance of unnecessary verbosity.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-014",
+    "name": "JSON Format Validity",
+    "category": "Format",
+    "description": "Checks if the output is valid JSON.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-015",
+    "name": "Tone Consistency",
+    "category": "Style",
+    "description": "Evaluates if the tone matches the persona.",
+    "cost": "Medium"
+  },
+  {
+    "id": "met-016",
+    "name": "SQL Syntax Validity",
+    "category": "Code",
+    "description": "Checks if generated SQL is syntactically correct.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-017",
+    "name": "Refusal Rate",
+    "category": "Safety",
+    "description": "Rate at which the model refuses to answer harmful prompts.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-018",
+    "name": "Prompt Injection Success",
+    "category": "Safety",
+    "description": "Success rate of jailbreaking attempts.",
+    "cost": "High"
+  },
+  {
+    "id": "met-019",
+    "name": "F1 Score",
+    "category": "Accuracy",
+    "description": "Harmonic mean of precision and recall.",
+    "cost": "Low"
+  },
+  {
+    "id": "met-020",
+    "name": "Embedding Similarity",
+    "category": "Similarity",
+    "description": "Cosine similarity between response and reference embeddings.",
+    "cost": "Medium"
+  }
+]

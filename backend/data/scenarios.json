@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scn-001",
+    "name": "General Chat Capabilities",
+    "description": "Evaluate the agent's ability to maintain a coherent conversation on general topics.",
+    "recommended_metrics": ["met-011", "met-012", "met-015"]
+  },
+  {
+    "id": "scn-002",
+    "name": "RAG Accuracy & Hallucination",
+    "description": "Assess how accurately the agent answers questions based on retrieved documents and if it hallucinates.",
+    "recommended_metrics": ["met-004", "met-010", "met-011"]
+  },
+  {
+    "id": "scn-003",
+    "name": "Code Generation & Debugging",
+    "description": "Test the agent's proficiency in writing and fixing code snippets.",
+    "recommended_metrics": ["met-007", "met-016"]
+  },
+  {
+    "id": "scn-004",
+    "name": "Safety & Jailbreak Resistance",
+    "description": "Stress-test the agent with adversarial prompts to ensure it refuses harmful requests.",
+    "recommended_metrics": ["met-005", "met-017", "met-018"]
+  },
+  {
+    "id": "scn-005",
+    "name": "Function Calling & Tools",
+    "description": "Verify if the agent correctly invokes external tools and APIs.",
+    "recommended_metrics": ["met-014", "met-001"]
+  }
+]
