@@ -1,0 +1,482 @@
+[
+  {
+    "id": "met-001",
+    "name": "Exact Match",
+    "category": "Accuracy",
+    "description": "Checks if the generated output exactly matches the reference.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "string_match"
+  },
+  {
+    "id": "met-002",
+    "name": "BLEU Score",
+    "category": "Similarity",
+    "description": "Measures n-gram overlap between candidate and reference translations.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "n_gram_overlap"
+  },
+  {
+    "id": "met-003",
+    "name": "ROUGE-L",
+    "category": "Similarity",
+    "description": "Measures longest common subsequence for summarization tasks.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "lcs_summary"
+  },
+  {
+    "id": "met-004",
+    "name": "Hallucination Rate",
+    "category": "Safety",
+    "description": "Percentage of responses containing factually incorrect information.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_judge"
+  },
+  {
+    "id": "met-005",
+    "name": "Toxicity Score",
+    "category": "Safety",
+    "description": "Detects toxic, offensive, or harmful language.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "classification"
+  },
+  {
+    "id": "met-006",
+    "name": "Bias Detector",
+    "category": "Safety",
+    "description": "Identifies gender, racial, or political bias in responses.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_judge"
+  },
+  {
+    "id": "met-007",
+    "name": "Code Execution Pass Rate",
+    "category": "Code",
+    "description": "Percentage of generated code snippets that pass unit tests.",
+    "cost": "High",
+    "grader_type": "code-based",
+    "method": "unit_test"
+  },
+  {
+    "id": "met-008",
+    "name": "Response Latency",
+    "category": "Performance",
+    "description": "Time taken to generate the first token and full response.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis"
+  },
+  {
+    "id": "met-009",
+    "name": "Token Usage",
+    "category": "Performance",
+    "description": "Number of tokens consumed per request.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis"
+  },
+  {
+    "id": "met-010",
+    "name": "Context Adherence",
+    "category": "RAG",
+    "description": "Measures how well the answer is supported by the retrieved context.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_judge"
+  },
+  {
+    "id": "met-011",
+    "name": "Relevance",
+    "category": "Quality",
+    "description": "How relevant the answer is to the user's question.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_rubric"
+  },
+  {
+    "id": "met-012",
+    "name": "Coherence",
+    "category": "Quality",
+    "description": "Logical flow and clarity of the response.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_rubric"
+  },
+  {
+    "id": "met-013",
+    "name": "Conciseness",
+    "category": "Style",
+    "description": "Avoidance of unnecessary verbosity.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "length_check"
+  },
+  {
+    "id": "met-014",
+    "name": "JSON Format Validity",
+    "category": "Format",
+    "description": "Checks if the output is valid JSON.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "schema_validation"
+  },
+  {
+    "id": "met-015",
+    "name": "Tone Consistency",
+    "category": "Style",
+    "description": "Evaluates if the tone matches the persona.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_rubric"
+  },
+  {
+    "id": "met-016",
+    "name": "SQL Syntax Validity",
+    "category": "Code",
+    "description": "Checks if generated SQL is syntactically correct.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "parser_validation"
+  },
+  {
+    "id": "met-017",
+    "name": "Refusal Rate",
+    "category": "Safety",
+    "description": "Rate at which the model refuses to answer harmful prompts.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "keyword_match"
+  },
+  {
+    "id": "met-018",
+    "name": "Prompt Injection Success",
+    "category": "Safety",
+    "description": "Success rate of jailbreaking attempts.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_judge"
+  },
+  {
+    "id": "met-019",
+    "name": "F1 Score",
+    "category": "Accuracy",
+    "description": "Harmonic mean of precision and recall.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "statistical"
+  },
+  {
+    "id": "met-020",
+    "name": "Embedding Similarity",
+    "category": "Similarity",
+    "description": "Cosine similarity between response and reference embeddings.",
+    "cost": "Medium",
+    "grader_type": "code-based",
+    "method": "vector_similarity"
+  },
+  {
+    "id": "met-021",
+    "name": "String Match Accuracy",
+    "category": "Validation",
+    "description": "Exact string matching with configurable fuzziness.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "string_match",
+    "anthropic_reference": "String match checks (exact, regex, fuzzy)"
+  },
+  {
+    "id": "met-022",
+    "name": "Regex Pattern Match",
+    "category": "Validation",
+    "description": "Validates output against regex patterns.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "regex_validation",
+    "anthropic_reference": "String match checks"
+  },
+  {
+    "id": "met-023",
+    "name": "Binary Test Pass Rate",
+    "category": "Testing",
+    "description": "Percentage of binary pass/fail tests passed.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "unit_test",
+    "anthropic_reference": "Binary tests (fail-to-pass, pass-to-pass)"
+  },
+  {
+    "id": "met-024",
+    "name": "Static Analysis Score",
+    "category": "Code Quality",
+    "description": "Results from linters, type checkers, security scanners.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "static_analysis",
+    "anthropic_reference": "Static analysis (lint, type, security)"
+  },
+  {
+    "id": "met-025",
+    "name": "Outcome Verification",
+    "category": "Validation",
+    "description": "Verifies final state matches expected outcome.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "state_check",
+    "anthropic_reference": "Outcome verification"
+  },
+  {
+    "id": "met-026",
+    "name": "Tool Call Correctness",
+    "category": "Agent Behavior",
+    "description": "Validates correct tools were called with proper parameters.",
+    "cost": "Medium",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Tool calls verification"
+  },
+  {
+    "id": "met-027",
+    "name": "LLM Rubric Score",
+    "category": "Quality",
+    "description": "LLM-as-judge scoring based on defined rubric.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_rubric",
+    "anthropic_reference": "Rubric-based scoring"
+  },
+  {
+    "id": "met-028",
+    "name": "Assertion Pass Rate",
+    "category": "Validation",
+    "description": "Percentage of natural language assertions passed.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_judge",
+    "anthropic_reference": "Natural language assertions"
+  },
+  {
+    "id": "met-029",
+    "name": "Pairwise Comparison Win Rate",
+    "category": "Comparative",
+    "description": "Win rate when compared against baseline model.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_comparison",
+    "anthropic_reference": "Pairwise comparison"
+  },
+  {
+    "id": "met-030",
+    "name": "Reference Similarity",
+    "category": "Quality",
+    "description": "Similarity to reference answer using LLM judge.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_judge",
+    "anthropic_reference": "Reference-based evaluation"
+  },
+  {
+    "id": "met-031",
+    "name": "Multi-Judge Agreement",
+    "category": "Reliability",
+    "description": "Agreement score across multiple LLM judges.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "multi_judge_consensus",
+    "anthropic_reference": "Multi-judge consensus"
+  },
+  {
+    "id": "met-032",
+    "name": "SME Approval Rate",
+    "category": "Human Evaluation",
+    "description": "Approval rate from subject matter experts.",
+    "cost": "Very High",
+    "grader_type": "human",
+    "method": "expert_review",
+    "anthropic_reference": "SME review"
+  },
+  {
+    "id": "met-033",
+    "name": "Crowd Consensus Score",
+    "category": "Human Evaluation",
+    "description": "Consensus score from crowd-sourced evaluation.",
+    "cost": "High",
+    "grader_type": "human",
+    "method": "crowdsourced",
+    "anthropic_reference": "Crowdsourced judgment"
+  },
+  {
+    "id": "met-034",
+    "name": "A/B Test Conversion Rate",
+    "category": "Production",
+    "description": "Conversion rate from A/B testing with real users.",
+    "cost": "Very High",
+    "grader_type": "human",
+    "method": "ab_testing",
+    "anthropic_reference": "A/B testing"
+  },
+  {
+    "id": "met-035",
+    "name": "Inter-Annotator Agreement",
+    "category": "Reliability",
+    "description": "Cohen's Kappa or similar agreement metric.",
+    "cost": "High",
+    "grader_type": "human",
+    "method": "statistical",
+    "anthropic_reference": "Inter-annotator agreement"
+  },
+  {
+    "id": "met-036",
+    "name": "pass@1 Rate",
+    "category": "Reliability",
+    "description": "Percentage of tasks succeeded on first attempt.",
+    "cost": "Medium",
+    "grader_type": "code-based",
+    "method": "pass_at_k",
+    "anthropic_reference": "pass@k metrics"
+  },
+  {
+    "id": "met-037",
+    "name": "pass@5 Rate",
+    "category": "Reliability",
+    "description": "Percentage of tasks with at least one success in 5 attempts.",
+    "cost": "High",
+    "grader_type": "code-based",
+    "method": "pass_at_k",
+    "anthropic_reference": "pass@k metrics"
+  },
+  {
+    "id": "met-038",
+    "name": "pass@10 Rate",
+    "category": "Reliability",
+    "description": "Percentage of tasks with at least one success in 10 attempts.",
+    "cost": "Very High",
+    "grader_type": "code-based",
+    "method": "pass_at_k",
+    "anthropic_reference": "pass@k metrics"
+  },
+  {
+    "id": "met-039",
+    "name": "pass^3 Consistency",
+    "category": "Reliability",
+    "description": "Probability that all 3 trials succeed.",
+    "cost": "High",
+    "grader_type": "code-based",
+    "method": "pass_consistency",
+    "anthropic_reference": "pass^k metrics"
+  },
+  {
+    "id": "met-040",
+    "name": "pass^5 Consistency",
+    "category": "Reliability",
+    "description": "Probability that all 5 trials succeed.",
+    "cost": "Very High",
+    "grader_type": "code-based",
+    "method": "pass_consistency",
+    "anthropic_reference": "pass^k metrics"
+  },
+  {
+    "id": "met-041",
+    "name": "Turn Count",
+    "category": "Transcript",
+    "description": "Number of conversation turns in a session.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Transcript analysis (n_turns)"
+  },
+  {
+    "id": "met-042",
+    "name": "Tool Call Count",
+    "category": "Transcript",
+    "description": "Number of tool calls made during execution.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Transcript analysis (n_toolcalls)"
+  },
+  {
+    "id": "met-043",
+    "name": "Total Token Usage",
+    "category": "Transcript",
+    "description": "Total tokens consumed across entire session.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Transcript analysis (n_total_tokens)"
+  },
+  {
+    "id": "met-044",
+    "name": "Time to First Token (TTFT)",
+    "category": "Performance",
+    "description": "Latency from request to first token output.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Latency metrics"
+  },
+  {
+    "id": "met-045",
+    "name": "Time to Last Token",
+    "category": "Performance",
+    "description": "Total time from request to completion.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Latency metrics"
+  },
+  {
+    "id": "met-046",
+    "name": "Tokens per Second",
+    "category": "Performance",
+    "description": "Output generation speed in tokens per second.",
+    "cost": "Low",
+    "grader_type": "code-based",
+    "method": "transcript_analysis",
+    "anthropic_reference": "Latency metrics"
+  },
+  {
+    "id": "met-047",
+    "name": "Groundedness Rate",
+    "category": "Research",
+    "description": "Percentage of claims supported by retrieved sources.",
+    "cost": "High",
+    "grader_type": "model-based",
+    "method": "llm_judge",
+    "anthropic_reference": "Groundedness checks"
+  },
+  {
+    "id": "met-048",
+    "name": "Coverage Percentage",
+    "category": "Research",
+    "description": "Percentage of required key facts covered.",
+    "cost": "Medium",
+    "grader_type": "code-based",
+    "method": "keyword_coverage",
+    "anthropic_reference": "Coverage checks"
+  },
+  {
+    "id": "met-049",
+    "name": "Source Quality Score",
+    "category": "Research",
+    "description": "Average quality score of sources consulted.",
+    "cost": "Medium",
+    "grader_type": "model-based",
+    "method": "llm_judge",
+    "anthropic_reference": "Source quality checks"
+  },
+  {
+    "id": "met-050",
+    "name": "Citation Accuracy",
+    "category": "Research",
+    "description": "Accuracy of citations and references.",
+    "cost": "Medium",
+    "grader_type": "code-based",
+    "method": "citation_validation",
+    "anthropic_reference": "Research agent evaluation"
+  }
+]

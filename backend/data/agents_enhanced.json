@@ -1,0 +1,81 @@
+[
+  {
+    "id": "ag-001",
+    "name": "Customer Support Bot",
+    "type": "RAG",
+    "description": "A RAG-based agent trained on company help center articles for customer support.",
+    "capabilities": ["retrieval", "qa", "summarization"],
+    "anthropic_alignment": "Conversational agent with knowledge base"
+  },
+  {
+    "id": "ag-002",
+    "name": "Code Assistant Pro",
+    "type": "Coding",
+    "description": "Specialized in Python and JavaScript development and debugging with tool access.",
+    "capabilities": ["code-gen", "debugging", "refactoring", "test-generation"],
+    "anthropic_alignment": "Coding agent - similar to Claude Code"
+  },
+  {
+    "id": "ag-003",
+    "name": "General Chatbot (GPT-4o)",
+    "type": "Chatbot",
+    "description": "General purpose conversational agent using GPT-4o.",
+    "capabilities": ["chat", "creative-writing", "reasoning"],
+    "anthropic_alignment": "Conversational agent"
+  },
+  {
+    "id": "ag-004",
+    "name": "Research Analyst Pro",
+    "type": "Research",
+    "description": "Specialized in information gathering, multi-source synthesis, and report generation with proper citations.",
+    "capabilities": ["web-search", "source-evaluation", "synthesis", "citation-management", "fact-checking"],
+    "anthropic_alignment": "Research agent - BrowseComp style information retrieval",
+    "evaluation_focus": [
+      "Groundedness (claims supported by sources)",
+      "Coverage (all key facts included)",
+      "Source quality (authoritative references)",
+      "Citation accuracy",
+      "Synthesis coherence"
+    ],
+    "typical_datasets": ["ds-004", "ds-008", "ds-009"],
+    "typical_scenarios": ["scn-008"],
+    "typical_metrics": ["met-047", "met-048", "met-049", "met-050"]
+  },
+  {
+    "id": "ag-005",
+    "name": "Browser Automation Agent",
+    "type": "Computer Use",
+    "description": "Interacts with GUI applications through screenshots, mouse clicks, and keyboard input for web automation.",
+    "capabilities": ["screen-understanding", "web-navigation", "form-completion", "multi-step-workflows", "visual-element-detection"],
+    "anthropic_alignment": "Computer use agent - WebArena/OSWorld style",
+    "evaluation_focus": [
+      "Task completion rate",
+      "Navigation accuracy",
+      "Time to completion",
+      "Token efficiency (DOM vs screenshots)",
+      "Error recovery"
+    ],
+    "typical_datasets": ["custom_web_tasks"],
+    "typical_scenarios": ["scn-009"],
+    "typical_metrics": ["met-025", "met-043", "met-045", "met-041"]
+  },
+  {
+    "id": "ag-006",
+    "name": "Multi-Agent Orchestrator",
+    "type": "Orchestration",
+    "description": "Coordinates multiple specialized agents to complete complex tasks through task decomposition and result aggregation.",
+    "capabilities": ["task-decomposition", "agent-selection", "result-aggregation", "error-handling", "state-management", "parallel-execution"],
+    "anthropic_alignment": "Multi-agent system - LangGraph/AutoGen pattern",
+    "evaluation_focus": [
+      "Task decomposition accuracy",
+      "Agent selection quality",
+      "Result aggregation correctness",
+      "Error recovery",
+      "Parallelization efficiency",
+      "End-to-end success rate"
+    ],
+    "coordinates_agents": ["ag-001", "ag-002", "ag-004", "ag-005"],
+    "typical_scenarios": ["complex_multi_domain_tasks"],
+    "typical_metrics": ["met-036", "met-037", "met-043", "met-045"]
+  }
+]
